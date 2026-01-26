@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color: #181818;
+    color: #dfdfdf;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+}
+
+#form {
+    background-color: #181818;
+    color: #fff;
+}
+
+#iframe {
+    height: 95vh;
+    width: 99%;
+}
+
+.poster {
+    height: 200px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 12px;
+    border-radius: 10px;
+}
+
+#results div {
+    padding: 10px 0;
+}
+
+#results div:hover {
+    background-color: #000;
+}
+
+#results div:hover .poster{
+    transform: scale(1.1);
+    transition: transform 0.5s ease
+}

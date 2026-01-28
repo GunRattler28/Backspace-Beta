@@ -8,13 +8,63 @@ body {
 }
 
 #form {
-    background-color: #181818;
-    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 250px auto;
+}
+
+#movie {
+    background-color: #0e0e0e;
+    color: #dfdfdf;
+    border: 2px solid #2f2f2f;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 18px;
+    width: 260px;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    transition: 
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+#movie:hover {
+    background-color: #000;
+    border: 2px solid #555555;
+}
+
+#movie:focus {
+    outline: none;
+    border-color: #0080ff;
+    box-shadow: 0px 0px 5px #0080ff;
+}
+
+#movie::placeholder {
+    color: #707070;
+    font-weight: 500;
+}
+
+.submit {
+    height: 48px;
+    padding: 14px 22px; 
+    background-color: #0080ff;
+    color: #dfdfdf;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
 }
 
 #iframe {
+    display: none;
     height: 95vh;
     width: 99%;
+    border: none;
 }
 
 .poster {

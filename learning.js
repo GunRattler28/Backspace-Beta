@@ -51,8 +51,14 @@ async function searchMovies(e) {
                 results.style.display = 'none';
                 iframe.style.display = 'block';
                 iframe.src = 'about:blank';
+                let player;
+                if (item.media_type == 'movie') {
+                    player = `https://www.vidking.net/embed/movie/${item.id}?color=0066cc&autoPlay=true`
+                } else if (item.media_type == 'tv') {
+                    player = `https://www.vidking.net/embed/tv/${item.id}/1/1?color=0066cc&autoPlay=true&nextEpisode=true&episodeSelector=true`
+                }
                 setTimeout(() => {
-                    iframe.src = `https://www.vidking.net/embed/movie/${item.id}?color=0066cc&autoPlay=true`;
+                    iframe.src = player;
                 }, 100);
             };
 

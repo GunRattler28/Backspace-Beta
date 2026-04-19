@@ -70,3 +70,13 @@ async function searchMovies(e) {
         console.error(err);
     }
 }
+
+function checkFullscreen() {
+    if (document.fullscreenElement) {
+        console.log("Fullscreen is ON");
+    } else {
+        console.log("Fullscreen is OFF");
+    }
+}
+
+document.addEventListener('mozfullscreenchange', checkFullscreen);

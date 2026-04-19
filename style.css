@@ -90,6 +90,7 @@ body {
     height: 95vh;
     width: 98%;
     border: none;
+    border-radius: 20px;
     margin-left: 1vw;
     margin-right: 1vw;
 }

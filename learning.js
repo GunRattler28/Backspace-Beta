@@ -73,10 +73,18 @@ async function searchMovies(e) {
 
 function checkFullscreen() {
     if (document.fullscreenElement) {
-        console.log("Fullscreen is ON");
+        if (screen.orientation && typeof screen.orientation.lock === 'function') {
+            screen.orientation.lock('landscape').catch((err) => {
+                console.error(err)
+            })
+        }
     } else {
-        console.log("Fullscreen is OFF");
+        if (screen.orientation && typeof screen.orientation.unlock === 'function') {
+            screen.orientation.unlock();
+        }
     }
 }
 
 document.addEventListener('mozfullscreenchange', checkFullscreen);
+document.addEventListener('webkitfullscreenchange', checkFullscreen);
+document.addEventListener('fullscreenchange', checkFullscreen);

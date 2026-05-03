@@ -13,6 +13,7 @@ async function searchMovies(e) {
     results.innerHTML = 'Loading...';
     results.style.display = 'block';
     iframe.style.display = 'none';
+    iframe.src = 'about:blank'
 
     try {
         const response = await fetch(

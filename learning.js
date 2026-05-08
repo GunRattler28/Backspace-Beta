@@ -4,6 +4,11 @@ const iframe = document.getElementById('iframe');
 
 form.addEventListener('submit', searchMovies);
 
+window.open() = function() {
+    console.log("DENIED")
+    return null
+}
+
 async function searchMovies(e) {
     e.preventDefault();
 

@@ -4,11 +4,6 @@ const iframe = document.getElementById('iframe');
 
 form.addEventListener('submit', searchMovies);
 
-window.open() = function() {
-    console.log("DENIED")
-    return null
-}
-
 async function searchMovies(e) {
     e.preventDefault();
 
@@ -59,9 +54,9 @@ async function searchMovies(e) {
                 iframe.src = 'about:blank';
                 let player;
                 if (item.media_type == 'movie') {
-                    player = `https://www.vidking.net/embed/movie/${item.id}?color=0066cc&autoPlay=true`
+                    player = `https://www.vidking.net/embed/movie/${item.id}?color=0066cc&autoPlay=true&pop=0`
                 } else if (item.media_type == 'tv') {
-                    player = `https://www.vidking.net/embed/tv/${item.id}/1/1?color=0066cc&autoPlay=true&nextEpisode=true&episodeSelector=true`
+                    player = `https://www.vidking.net/embed/tv/${item.id}/1/1?color=0066cc&autoPlay=true&nextEpisode=true&episodeSelector=true&pop=0`
                 }
                 setTimeout(() => {
                     iframe.src = player;

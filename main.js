@@ -8,8 +8,8 @@ form.addEventListener('submit', searchMovies);
     const originalOpen = window.open;
     
     window.open = function(url, target, features) {
-        console.log("Popup blocked:", url);   // for debugging
-        return null;   // block the popup
+        console.log("Popup blocked:", url);
+        return null;
     };
 })();
 
